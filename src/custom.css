@@ -1,0 +1,52 @@
+:root {
+  --primary-color: #285430; /* Verde oscuro */
+  --secondary-color: #5F8D4E; /* Verde medio */
+  --background-color: #E5D9B6; /* Beige claro */
+  --text-color: #3C2A21; /* Marrón oscuro */
+  --card-background: #F8F4E3; /* Crema para las tarjetas */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.bg-primary-custom {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-secondary-custom {
+  background-color: var(--secondary-color) !important;
+}
+
+.card {
+  background-color: var(--card-background);
+  border: none; /* Quitar borde por defecto */
+  border-radius: 15px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: var(--secondary-color);
+}
+
+.accordion-body {
+  background-color: #f8f9fa; /* Gris claro */
+}
