@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import { Container } from 'react-bootstrap';
+import WhatsAppButton from './components/WhatsAppButton';
 
 // Importar componentes de página
 import Home from './pages/Home';
@@ -13,15 +13,16 @@ function App() {
     <Router>
       <div className="d-flex flex-column min-vh-100">
         <NavBar />
-        <Container as="main" className="mt-4 flex-grow-1">
+        <main className="flex-grow-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </Container>
+        </main>
         <Footer />
       </div>
+      <WhatsAppButton />
     </Router>
   );
 }

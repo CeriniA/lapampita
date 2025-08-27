@@ -1,0 +1,12 @@
+/* Home.css */
+
+.hero-section {
+    background-image: url('../assets/img7.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.list-group-item-transparent {
+    background-color: transparent !important;
+}

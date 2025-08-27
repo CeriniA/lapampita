@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+    /* Home page hero section */
+    .hero-overlay {
+        border-radius: 0;
+    }
+
+    /* About page carousel */
+    .carousel {
+        margin-left: -12px; /* Offset Bootstrap container padding */
+        margin-right: -12px; /* Offset Bootstrap container padding */
+    }
+}

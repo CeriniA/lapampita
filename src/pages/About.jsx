@@ -1,6 +1,7 @@
 import { Container, Row, Col, Card, Image, Carousel } from 'react-bootstrap';
 import facundoImage from '../assets/img4.png';
 import equipoImage from '../assets/img5.png';
+import './About.css';
 
 // Imágenes para el carrusel
 import carouselImg1 from '../assets/img1.png';
@@ -13,23 +14,23 @@ const About = () => {
       <Row className="mb-5">
         <Col>
           <h2 className="text-center mb-4">El Lugar: Microfinca La Pampita</h2>
-          <Carousel interval={3000}>
+          <Carousel interval={3000} pause={false}>
             <Carousel.Item>
-              <Image src={carouselImg1} className="d-block w-100" style={{ height: '500px', objectFit: 'cover' }} alt="Vista de la microfinca" />
+              <Image src={carouselImg1} className="d-block w-100 carousel-image object-fit-cover" alt="Vista de la microfinca" />
               <Carousel.Caption className="bg-dark p-2 rounded opacity-75 text-center">
                 <h5>Un lugar en Traslasierra, Córdoba</h5>
                 <p>La Pampita es una microfinca de 1 hectárea ubicada en Villa de Las Rosas, un entorno ideal para la agricultura.</p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <Image src={carouselImg2} className="d-block w-100" style={{ height: '500px', objectFit: 'cover' }} alt="Cultivos ecológicos" />
+              <Image src={carouselImg2} className="d-block w-100 carousel-image object-fit-cover" alt="Cultivos ecológicos" />
               <Carousel.Caption className="bg-dark p-2 rounded opacity-75 text-center">
                 <h5>Horticultura Ecológica</h5>
                 <p>Desde hace 4 años, nos dedicamos a la horticultura comercial con un enfoque ecológico y regenerativo.</p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <Image src={carouselImg6} className="d-block w-100" style={{ height: '500px', objectFit: 'cover' }} alt="Aprendizaje práctico" />
+              <Image src={carouselImg6} className="d-block w-100 carousel-image object-fit-cover" alt="Aprendizaje práctico" />
               <Carousel.Caption className="bg-dark p-2 rounded opacity-75 text-center">
                 <h5>Aprendizaje y Producción</h5>
                 <p>Es un espacio donde la teoría se encuentra con la práctica, fomentando un aprendizaje real y directo.</p>
@@ -47,7 +48,7 @@ const About = () => {
 
       <Row className="text-center">
         <Col md={6} className="mb-4">
-          <Image src={facundoImage} roundedCircle fluid style={{ width: '180px', height: '180px', objectFit: 'cover' }} className="mb-3" />
+          <Image src={facundoImage} roundedCircle className="mb-3 profile-image object-fit-cover" />
           <h4>Facundo José Sánchez</h4>
           <p className="text-muted"><strong>Ingeniero Agrónomo</strong></p>
           <p>
@@ -55,7 +56,7 @@ const About = () => {
           </p>
         </Col>
         <Col md={6} className="mb-4">
-          <Image src={equipoImage} roundedCircle fluid style={{ width: '180px', height: '180px', objectFit: 'cover' }} className="mb-3" />
+          <Image src={equipoImage} roundedCircle className="mb-3 profile-image object-fit-cover" />
           <h4>Equipo de Apoyo</h4>
           <p className="text-muted">Colaboradores</p>
           <p>

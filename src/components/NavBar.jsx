@@ -4,7 +4,7 @@ import logo from '../assets/logo.png'; // Importar el logo
 
 const NavBar = () => {
   return (
-    <Navbar bg="primary-custom" variant="dark" expand="lg">
+    <Navbar bg="primary-custom" variant="dark" expand="lg" sticky="top">
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img

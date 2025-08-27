@@ -1,0 +1,10 @@
+/* About.css */
+
+.carousel-image {
+    height: 350px;
+}
+
+.profile-image {
+    width: 180px; /* Use !important to override global style */
+    height: 180px;
+}
