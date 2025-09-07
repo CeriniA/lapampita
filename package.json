@@ -9,6 +9,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
+    "build-snap": "vite build && react-snap",
     "postbuild": "react-snap",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -38,13 +39,19 @@
     "include": [
       "/",
       "/about",
-      "/contact"
+      "/contact",
+      "/courses",
+      "/courses/horticultura-biointensiva",
+      "/courses/permacultura-urbana",
+      "/courses/agricultura-regenerativa"
     ],
     "skipThirdPartyRequests": true,
     "cacheAjaxRequests": false,
     "puppeteerArgs": [
       "--no-sandbox",
       "--disable-setuid-sandbox"
-    ]
+    ],
+    "source": "dist",
+    "destination": "dist"
   }
 }
