@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaSeedling, FaClock, FaUsers, FaPlay } from 'react-icons/fa';
+import course1Image from '../assets/course-1.png';
 
 const Courses = () => {
   const [courses, setCourses] = useState([]);
@@ -18,30 +19,8 @@ const Courses = () => {
         price: 299,
         duration: '8 semanas',
         students: 156,
-        thumbnail: '/assets/course-1.jpg',
+        thumbnail: course1Image,
         level: 'Intermedio'
-      },
-      {
-        id: 2,
-        slug: 'permacultura-urbana',
-        title: 'Permacultura Urbana',
-        description: 'Diseña sistemas alimentarios sostenibles en espacios urbanos aplicando principios de permacultura.',
-        price: 249,
-        duration: '6 semanas',
-        students: 89,
-        thumbnail: '/assets/course-2.jpg',
-        level: 'Principiante'
-      },
-      {
-        id: 3,
-        slug: 'agricultura-regenerativa',
-        title: 'Agricultura Regenerativa',
-        description: 'Restaura la salud del suelo y los ecosistemas mientras produces alimentos de alta calidad.',
-        price: 349,
-        duration: '10 semanas',
-        students: 67,
-        thumbnail: '/assets/course-3.jpg',
-        level: 'Avanzado'
       }
     ];
 
