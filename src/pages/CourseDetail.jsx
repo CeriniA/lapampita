@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button, Badge, Accordion, ListGroup, Modal } from 'react-bootstrap';
 import { useParams, Link } from 'react-router-dom';
 import { FaClock, FaUsers, FaPlay, FaLock, FaCheck, FaStar, FaDownload } from 'react-icons/fa';
+import { getCourseBySlug } from '../data/courses';
 
 const CourseDetail = () => {
   const { slug } = useParams();
@@ -15,74 +16,9 @@ const CourseDetail = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
 
   useEffect(() => {
-    // Simular carga de curso específico
-    const mockCourses = {
-      'horticultura-biointensiva': {
-        id: 1,
-        slug: 'horticultura-biointensiva',
-        title: 'Horticultura Biointensiva',
-        description: 'Domina las técnicas más avanzadas de cultivo de alta densidad y máximo rendimiento en espacios reducidos. Este curso te enseñará cómo producir más alimentos en menos espacio, utilizando métodos sostenibles y ecológicos.',
-        price: 299,
-        originalPrice: 399,
-        duration: '8 semanas',
-        students: 156,
-        rating: 4.8,
-        reviews: 47,
-        thumbnail: '/assets/course-1.jpg',
-        level: 'Intermedio',
-        instructor: 'Ing. Agrónomo Facundo José Sánchez',
-        whatYouLearn: [
-          'Técnicas de cultivo biointensivo de alta densidad',
-          'Optimización del uso del espacio y recursos',
-          'Métodos de compostaje intensivo',
-          'Rotación de cultivos para máximo rendimiento',
-          'Herramientas y equipamiento especializado',
-          'Planificación y gestión de la producción'
-        ],
-        curriculum: [
-          {
-            title: 'Fundamentos de la Horticultura Biointensiva',
-            lessons: [
-              { title: 'Historia y principios básicos', duration: '15 min', free: true },
-              { title: 'Preparación profunda del suelo', duration: '25 min', free: false },
-              { title: 'Selección de variedades apropiadas', duration: '20 min', free: false }
-            ]
-          },
-          {
-            title: 'Técnicas de Siembra y Plantación',
-            lessons: [
-              { title: 'Espaciado intensivo de cultivos', duration: '30 min', free: false },
-              { title: 'Siembra en hexágono vs. hileras', duration: '22 min', free: false },
-              { title: 'Transplante y cuidados iniciales', duration: '18 min', free: false }
-            ]
-          },
-          {
-            title: 'Manejo del Suelo y Nutrición',
-            lessons: [
-              { title: 'Compostaje biointensivo', duration: '35 min', free: false },
-              { title: 'Cultivos de carbono', duration: '28 min', free: false },
-              { title: 'Fertilización natural', duration: '20 min', free: false }
-            ]
-          }
-        ],
-        requirements: [
-          'Conocimientos básicos de horticultura',
-          'Acceso a un espacio de cultivo (mínimo 10m²)',
-          'Herramientas básicas de jardinería'
-        ],
-        includes: [
-          '25+ videos en alta definición',
-          'Material descargable (PDFs, plantillas)',
-          'Acceso de por vida al curso',
-          'Certificado de finalización',
-          'Soporte directo del instructor',
-          'Grupo privado de estudiantes'
-        ]
-      }
-    };
-
+    // Obtener curso desde fuente centralizada
     setTimeout(() => {
-      const courseData = mockCourses[slug];
+      const courseData = getCourseBySlug(slug);
       if (courseData) {
         setCourse(courseData);
         // Simular verificación de acceso (después conectarás con tu API)

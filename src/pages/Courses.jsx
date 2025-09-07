@@ -2,30 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaSeedling, FaClock, FaUsers, FaPlay } from 'react-icons/fa';
-import course1Image from '../assets/course-1.png';
+import { getAllCourses } from '../data/courses';
 
 const Courses = () => {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simular carga de cursos (después conectarás con tu API)
-    const mockCourses = [
-      {
-        id: 1,
-        slug: 'horticultura-biointensiva',
-        title: 'Horticultura Biointensiva',
-        description: 'Aprende las técnicas más avanzadas de cultivo de alta densidad y máximo rendimiento en espacios reducidos.',
-        price: 299,
-        duration: '8 semanas',
-        students: 156,
-        thumbnail: course1Image,
-        level: 'Intermedio'
-      }
-    ];
-
+    // Simular carga de cursos desde fuente centralizada
     setTimeout(() => {
-      setCourses(mockCourses);
+      setCourses(getAllCourses());
       setLoading(false);
     }, 1000);
   }, []);
@@ -78,7 +64,7 @@ const Courses = () => {
               <Card.Body className="d-flex flex-column">
                 <Card.Title>{course.title}</Card.Title>
                 <Card.Text className="flex-grow-1">
-                  {course.description}
+                  {course.shortDescription}
                 </Card.Text>
                 
                 <div className="course-meta mb-3">
