@@ -9,8 +9,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
-    "build-snap": "vite build && react-snap",
-    "postbuild": "react-snap",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -32,26 +30,6 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
-    "react-snap": "^1.23.0",
     "vite": "^7.1.2"
-  },
-  "reactSnap": {
-    "include": [
-      "/",
-      "/about",
-      "/contact",
-      "/courses",
-      "/courses/horticultura-biointensiva",
-      "/courses/permacultura-urbana",
-      "/courses/agricultura-regenerativa"
-    ],
-    "skipThirdPartyRequests": true,
-    "cacheAjaxRequests": false,
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ],
-    "source": "dist",
-    "destination": "dist"
   }
 }
