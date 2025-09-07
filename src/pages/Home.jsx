@@ -28,7 +28,7 @@ const Home = () => {
                 {/* Objetivos y Formación Section */}
                 <Row className="mb-5 d-flex align-items-center m-0">
                     <Col md={6} className="mb-4 p-0">
-                        <Image src={img1} rounded fluid  />
+                        <Image src={img1} rounded fluid alt="Estudiantes aprendiendo técnicas de horticultura comercial ecológica en La Pampita Microfinca, Villa de las Rosas, Córdoba" />
                     </Col>
                     <Col md={6} className="mb-4">
                         <h3>Objetivos de la Capacitación</h3>
@@ -86,6 +86,23 @@ const Home = () => {
                     </Col>
                 </Row>
 
+                {/* Online Courses Section */}
+                <Row className="text-center mb-5 bg-light p-5 rounded">
+                    <Col>
+                        <h2 className="mb-4">¿Prefieres aprender desde casa?</h2>
+                        <p className="lead mb-4">
+                            Descubre nuestros cursos online de horticultura comercial ecológica. 
+                            Aprende a tu ritmo con videos en alta definición y soporte directo del instructor.
+                        </p>
+                        <Button as={Link} to="/courses" variant="outline-primary" size="lg" className="me-3">
+                            Ver Cursos Online
+                        </Button>
+                        <Button href="https://forms.gle/jrRqbJQJhxRdgj9K8" target="_blank" variant="primary" size="lg">
+                            Curso Presencial
+                        </Button>
+                    </Col>
+                </Row>
+
                 {/* Que Incluye Section */}
                 <Row className="mb-5">
                     <Col className="text-center">
@@ -95,7 +112,7 @@ const Home = () => {
                 <Row className="mb-5 d-flex align-items-stretch text-center">
                     <Col md={4} className="mb-4">
                         <Card className="h-100">
-                            <Card.Img variant="top" src={img2} />
+                            <Card.Img variant="top" src={img2} alt="Capacitación práctica en técnicas de cultivo ecológico y herramientas de gestión agrícola" />
                             <Card.Body>
                                 <Card.Title>Formación Intensiva</Card.Title>
                                 <Card.Text>
@@ -106,7 +123,7 @@ const Home = () => {
                     </Col>
                     <Col md={4} className="mb-4">
                         <Card className="h-100">
-                            <Card.Img variant="top" src={img3} />
+                            <Card.Img variant="top" src={img3} alt="Alojamiento en carpa y espacios para casa rodante en La Pampita Microfinca durante el curso intensivo" />
                             <Card.Body>
                                 <Card.Title>Alojamiento</Card.Title>
                                 <Card.Text>
@@ -117,7 +134,7 @@ const Home = () => {
                     </Col>
                     <Col md={4} className="mb-4">
                         <Card className="h-100">
-                            <Card.Img variant="top" src={img1} />
+                            <Card.Img variant="top" src={img1} alt="Comidas incluidas en el curso: desayunos, almuerzos y meriendas con productos frescos de la microfinca" />
                             <Card.Body>
                                 <Card.Title>Comidas</Card.Title>
                                 <Card.Text>
