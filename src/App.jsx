@@ -21,7 +21,7 @@ const PageTitle = ({ title }) => {
 
 function App() {
   return (
-    <Router basename="/lapampita">
+    <Router>
       <div className="d-flex flex-column min-vh-100">
         <NavBar />
         <main className="flex-grow-1">
