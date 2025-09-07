@@ -8,7 +8,9 @@ import './Home.css';
 import img1 from '../assets/img1.png';
 import img2 from '../assets/img2.png';
 import img3 from '../assets/img3.png';
-
+import img8 from '../assets/img8.png';
+import img9 from '../assets/img9.png';
+import img10 from '../assets/img10.png';
 const Home = () => {
     return (
         <Container fluid as="main" className="p-0 pt-0">
@@ -112,33 +114,33 @@ const Home = () => {
                 <Row className="mb-5 d-flex align-items-stretch text-center">
                     <Col md={4} className="mb-4">
                         <Card className="h-100">
-                            <Card.Img variant="top" src={img2} alt="Capacitación práctica en técnicas de cultivo ecológico y herramientas de gestión agrícola" />
+                            <Card.Img variant="top" src={img8} alt="Capacitación práctica en técnicas de cultivo ecológico y herramientas de gestión agrícola" />
                             <Card.Body>
                                 <Card.Title>Formación Intensiva</Card.Title>
                                 <Card.Text>
-                                    Los 5 días de formación intensiva, con los materiales y la disponibilidad de herramientas que utilizaremos durante estos días.
+                                    Los 5 días de formación intensiva.
                                 </Card.Text>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col md={4} className="mb-4">
                         <Card className="h-100">
-                            <Card.Img variant="top" src={img3} alt="Alojamiento en carpa y espacios para casa rodante en La Pampita Microfinca durante el curso intensivo" />
+                            <Card.Img variant="top" src={img10} alt="Herramientas" />
                             <Card.Body>
-                                <Card.Title>Alojamiento</Card.Title>
+                                <Card.Title>Herramientas</Card.Title>
                                 <Card.Text>
-                                    Alojamiento en carpa o lugar para casa rodante. En caso de querer alojarse en habitaciones, hay cabañas para alquilar muy cerca del huerto (o hostel) a precios accesibles, donde pueden alojarse hasta 5 personas para dividir el costo (nosotros nos haremos cargo de la gestión si todos los participantes del curso están de acuerdo).
+                                    Herramientas
                                 </Card.Text>
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col md={4} className="mb-4">
                         <Card className="h-100">
-                            <Card.Img variant="top" src={img1} alt="Comidas incluidas en el curso: desayunos, almuerzos y meriendas con productos frescos de la microfinca" />
+                            <Card.Img variant="top" src={img9} alt="Material de apoyo" />
                             <Card.Body>
-                                <Card.Title>Comidas</Card.Title>
+                                <Card.Title>Material audiovisual</Card.Title>
                                 <Card.Text>
-                                    Desayunos, almuerzos y meriendas. El almuerzo es Espartano e incluye carnes, huevos y hojas verdes. Si tienes una elección alimentaria diferente, puedes comunicarlo en el formulario de inscripción. La cena no está incluida.
+                                    Material audiovisual
                                 </Card.Text>
                             </Card.Body>
                         </Card>
